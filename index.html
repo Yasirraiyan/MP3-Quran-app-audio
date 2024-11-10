@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Hello World!</title>
+    <link rel="stylesheet" href="styles.css" />
+    
+  </head>
+  <body>
+      
+      <p id="currentTime"></p>
+      <div class="player">
+         <h1>Quran MP3 Player</h1> 
+         <select id="surahSelector" onchange="playSurah()"> 
+         <option value="https://server8.mp3quran.net/afs/001.mp3">Al-Fatihah</option>
+         <option value="https://server8.mp3quran.net/afs/002.mp3">Al-Baqarah</option> 
+         <option value="https://server8.mp3quran.net/afs/003.mp3">Aal-E-Imran</option> 
+         <option value="https://server8.mp3quran.net/afs/004.mp3">An-Nisa</option> 
+         <option value="https://server8.mp3quran.net/afs/005.mp3">Al-Ma'idah</option> 
+         <option value="https://server8.mp3quran.net/afs/006.mp3">Al-An'am</option>
+         <option value="https://server8.mp3quran.net/afs/007.mp3">Al-A'raf</option> 
+         <option value="https://server8.mp3quran.net/afs/008.mp3">Al-Anfal</option> 
+         <option value="https://server8.mp3quran.net/afs/009.mp3">At-Tawbah</option> 
+         <option value="https://server8.mp3quran.net/afs/010.mp3">Yunus</option> 
+         <option value="https://server8.mp3quran.net/afs/011.mp3">Hud</option>
+         <option value="https://server8.mp3quran.net/afs/012.mp3">Yusuf</option>
+         <option value="https://server8.mp3quran.net/afs/013.mp3">Ar-Ra'd</option> 
+         <option value="https://server8.mp3quran.net/afs/014.mp3">Ibrahim</option>
+         <option value="https://server8.mp3quran.net/afs/015.mp3">Al-Hijr</option> 
+         <option value="https://server8.mp3quran.net/afs/016.mp3">An-Nahl</option>
+         <option value="https://server8.mp3quran.net/afs/017.mp3">Al-Isra</option>
+         <option value="https://server8.mp3quran.net/afs/018.mp3">Al-Kahf</option> 
+         <option value="https://server8.mp3quran.net/afs/019.mp3">Maryam</option> 
+         <option value="https://server8.mp3quran.net/afs/020.mp3">Taha</option> 
+         <option value="https://server8.mp3quran.net/afs/021.mp3">Al-Anbiya</option> 
+         <option value="https://server8.mp3quran.net/afs/022.mp3">Al-Hajj</option> 
+         <option value="https://server8.mp3quran.net/afs/023.mp3">Al-Mu'minun</option> 
+         <option value="https://server8.mp3quran.net/afs/024.mp3">An-Nur</option> 
+         <option value="https://server8.mp3quran.net/afs/025.mp3">Al-Furqan</option> 
+         <option value="https://server8.mp3quran.net/afs/026.mp3">Ash-Shu'ara</option> 
+         <option value="https://server8.mp3quran.net/afs/027.mp3">An-Naml</option>
+         <option value="https://server8.mp3quran.net/afs/028.mp3">Al-Qasas</option> 
+         <option value="https://server8.mp3quran.net/afs/029.mp3">Al-Ankabut</option> 
+         <option value="https://server8.mp3quran.net/afs/030.mp3">Ar-Rum</option>
+         <option value="https://server8.mp3quran.net/afs/031.mp3">Luqman</option> 
+         <option value="https://server8.mp3quran.net/afs/032.mp3">As-Sajda</option> 
+         <option value="https://server8.mp3quran.net/afs/033.mp3">Al-Ahzab</option> 
+         <option value="https://server8.mp3quran.net/afs/034.mp3">Saba</option> 
+         <option value="https://server8.mp3quran.net/afs/035.mp3">Fatir</option> 
+         <option value="https://server8.mp3quran.net/afs/036.mp3">Ya-Sin</option>
+         <option value="https://server8.mp3quran.net/afs/037.mp3">As-Saffat</option>
+         <option value="https://server8.mp3quran.net/afs/038.mp3">Sad</option>
+         <option value="https://server8.mp3quran.net/afs/039.mp3">Az-Zumar</option> 
+         <option value="https://server8.mp3quran.net/afs/040.mp3">Ghafir</option> 
+         <option value="https://server8.mp3quran.net/afs/041.mp3">Fussilat</option> 
+         <option value="https://server8.mp3quran.net/afs/042.mp3">Ash-Shura</option>
+         <option value="https://server8.mp3quran.net/afs/043.mp3">Az-Zukhruf</option> 
+         <option value="https://server8.mp3quran.net/afs/044.mp3">Ad-Dukhan</option>
+         <option value="https://server8.mp3quran.net/afs/045.mp3">Al-Jathiyah</option>
+         <option value="https://server8.mp3quran.net/afs/046.mp3">Al-Ahqaf</option> 
+         <option value="https://server8.mp3quran.net/afs/047.mp3">Muhammad</option>
+         <option value="https://server8.mp3quran.net/afs/048.mp3">Al-Fath</option>
+         <option value="https://server8.mp3quran.net/afs/049.mp3">Al-Hujurat</option>
+         <option value="https://server8.mp3quran.net/afs/050.mp3">Qaf</option> 
+         <option value="https://server8.mp3quran.net/afs/051.mp3">Adh-Dhariyat</option> 
+         <option value="https://server8.mp3quran.net/afs/052.mp3">At-Tur</option> 
+         <option value="https://server8.mp3quran.net/afs/053.mp3">An-Najm</option> 
+         <option value="https://server8.mp3quran.net/afs/054.mp3">Al-Qamar</option> 
+         <option value="https://server8.mp3quran.net/afs/055.mp3">Ar-Rahman</option>
+         <option value="https://server8.mp3quran.net/afs/056.mp3">Al-Waqi'a</option>
+         <option value="https://server8.mp3quran.net/afs/057.mp3">Al-Hadid</option> 
+         <option value="https://server8.mp3quran.net/afs/058.mp3">Al-Mujadila</option> 
+         <option value="https://server8.mp3quran.net/afs/059.mp3">Al-Hashr</option>
+         <option value="https://server8.mp3quran.net/afs/060.mp3">Al-Mumtahina</option>
+         <option value="https://server8.mp3quran.net/afs/061.mp3">As-Saff</option> 
+         <option value="https://server8.mp3quran.net/afs/062.mp3">Al-Jumu'a</option>
+         <option value="https://server8.mp3quran.net/afs/063.mp3">Al-Munafiqun</option> 
+         <option value="https://server8.mp3quran.net/afs/064.mp3">At-Taghabun</option>
+         <option value="https://server8.mp3quran.net/afs/065.mp3">At-Talaq</option> 
+         <option value="https://server8.mp3quran.net/afs/066.mp3">At-Tahrim</option>
+         <option value="https://server8.mp3quran.net/afs/067.mp3">Al-Mulk</option>
+         <option value="https://server8.mp3quran.net/afs/068.mp3">Al-Qalam</option> 
+         <option value="https://server8.mp3quran.net/afs/069.mp3">Al-Haaqqa</option>
+         <option value="https://server8.mp3quran.net/afs/070.mp3">Al-Ma'arij</option>
+<option value="https://server8.mp3quran.net/afs/071.mp3">Nuh</option>
+<option value="https://server8.mp3quran.net/afs/072.mp3">Al-Jinn</option>
+<option value="https://server8.mp3quran.net/afs/073.mp3">Al-Muzzammil</option>
+<option value="https://server8.mp3quran.net/afs/074.mp3">Al-Muddathir</option>
+<option value="https://server8.mp3quran.net/afs/075.mp3">Al-Qiyamah</option>
+<option value="https://server8.mp3quran.net/afs/076.mp3">Al-Insan</option>
+<option value="https://server8.mp3quran.net/afs/077.mp3">Al-Mursalat</option>
+<option value="https://server8.mp3quran.net/afs/078.mp3">An-Naba</option>
+<option value="https://server8.mp3quran.net/afs/079.mp3">An-Nazi'at</option>
+<option value="https://server8.mp3quran.net/afs/080.mp3">Abasa</option>
+<option value="https://server8.mp3quran.net/afs/081.mp3">At-Takwir</option>
+<option value="https://server8.mp3quran.net/afs/082.mp3">Al-Infitar</option>
+<option value="https://server8.mp3quran.net/afs/083.mp3">Al-Mutaffifin</option>
+<option value="https://server8.mp3quran.net/afs/084.mp3">Al-Inshiqaq</option>
+<option value="https://server8.mp3quran.net/afs/085.mp3">Al-Buruj</option>
+<option value="https://server8.mp3quran.net/afs/086.mp3">At-Tariq</option>
+<option value="https://server8.mp3quran.net/afs/087.mp3">Al-Ala</option>
+<option value="https://server8.mp3quran.net/afs/088.mp3">Al-Ghashiyah</option>
+<option value="https://server8.mp3quran.net/afs/089.mp3">Al-Fajr</option>
+<option value="https://server8.mp3quran.net/afs/090.mp3">Al-Balad</option>
+<option value="https://server8.mp3quran.net/afs/091.mp3">Ash-Shams</option>
+<option value="https://server8.mp3quran.net/afs/092.mp3">Al-Lail</option>
+<option value="https://server8.mp3quran.net/afs/093.mp3">Ad-Duha</option>
+<option value="https://server8.mp3quran.net/afs/094.mp3">Ash-Sharh</option>
+<option value="https://server8.mp3quran.net/afs/095.mp3">At-Tin</option>
+<option value="https://server8.mp3quran.net/afs/096.mp3">Al-Alaq</option>
+<option value="https://server8.mp3quran.net/afs/097.mp3">Al-Qadr</option>
+<option value="https://server8.mp3quran.net/afs/098.mp3">Al-Bayyina</option>
+<option value="https://server8.mp3quran.net/afs/099.mp3">Az-Zalzalah</option>
+<option value="https://server8.mp3quran.net/afs/100.mp3">Al-Adiyat</option>
+<option value="https://server8.mp3quran.net/afs/101.mp3">Al-Qariah</option>
+<option value="https://server8.mp3quran.net/afs/102.mp3">At-Takathur</option>
+<option value="https://server8.mp3quran.net/afs/103.mp3">Al-Asr</option>
+<option value="https://server8.mp3quran.net/afs/104.mp3">Al-Humazah</option>
+<option value="https://server8.mp3quran.net/afs/105.mp3">Al-Fil</option>
+<option value="https://server8.mp3quran.net/afs/106.mp3">Quraish</option>
+<option value="https://server8.mp3quran.net/afs/107.mp3">Al-Ma'un</option>
+<option value="https://server8.mp3quran.net/afs/108.mp3">Al-Kawthar</option>
+<option value="https://server8.mp3quran.net/afs/109.mp3">Al-Kafirun</option>
+<option value="https://server8.mp3quran.net/afs/110.mp3">An-Nasr</option>
+<option value="https://server8.mp3quran.net/afs/111.mp3">Al-Masad</option>
+<option value="https://server8.mp3quran.net/afs/112.mp3">Al-Ikhlas</option>
+<option value="https://server8.mp3quran.net/afs/113.mp3">Al-Falaq</option>
+<option value="https://server8.mp3quran.net/afs/114.mp3">An-Nas</option>
+</select>
+
+<audio id="audioPlayer" controls preload="auto"> 
+<source id="audioSource" src="https://server8.mp3quran.net/afs/001.mp3" type="audio/mpeg"> Your browser does not support the audio element. 
+</audio> 
+<div class="controls">
+   <button onclick="playAudio()">Play</button> 
+   <button onclick="pauseAudio()">Pause</button
+   > <button onclick="previousSurah()">Previous</button> 
+   <button onclick="nextSurah()">Next</button> 
+   <button onclick="toggleRepeat()">Repeat</button>
+   </div>
+
+
+      <script src="script.js"></script>
+      
+  </body>
+</html>
